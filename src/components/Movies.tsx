@@ -6,7 +6,6 @@ type MoviesProps = {
 };
 
 function Movies({ movies }: MoviesProps) {
-    console.log(movies);
     return movies.map((movie) =>
         <Movie title={movie.title} poster={movie.poster_path} key={movie.id} />
     )

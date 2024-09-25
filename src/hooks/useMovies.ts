@@ -24,6 +24,7 @@ function useMovies(searchTerm: string, page: number) {
                 page: page.toString(),
                 api_key: import.meta.env.VITE_API_TOKEN,
             });
+            // TODO: Error handling :P
             const response = await apiClient.get<MoviesSearchResult>(`/search/movie?${searchParams.toString()}`, { signal });
             return response.data;
         }
